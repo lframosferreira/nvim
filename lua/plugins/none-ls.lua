@@ -15,7 +15,7 @@ return {
                 null_ls.builtins.formatting.clang_format,
 
                 -- Rust
-                null_ls.builtins.formatting.ruff,
+                null_ls.builtins.formatting.rustfmt,
 
                 -- Python
                 null_ls.builtins.formatting.isort,
