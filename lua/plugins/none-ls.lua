@@ -1,29 +1,32 @@
 return {
-    "nvimtools/none-ls.nvim",
-    config = function()
-        local null_ls = require("null-ls")
-        null_ls.setup({
-            sources = {
-                -- Lua
-                null_ls.builtins.formatting.stylua,
+	"nvimtools/none-ls.nvim",
+	config = function()
+		local null_ls = require("null-ls")
+		null_ls.setup({
+			sources = {
+				-- General
+				null_ls.builtins.formatting.prettier,
 
-                -- JS/TS
-                null_ls.builtins.formatting.eslint,
-                null_ls.builtins.diagnostics.eslint_d,
+				-- Lua
+				null_ls.builtins.formatting.stylua,
 
-                -- C/C++
-                null_ls.builtins.formatting.clang_format,
+				-- JS/TS
+				null_ls.builtins.formatting.eslint,
+				null_ls.builtins.diagnostics.eslint_d,
 
-                -- Rust
-                null_ls.builtins.formatting.rustfmt,
+				-- C/C++
+				null_ls.builtins.formatting.clang_format,
 
-                -- Python
-                null_ls.builtins.formatting.isort,
-                null_ls.builtins.formatting.black,
-                null_ls.builtins.diagnostics.mypy,
-                null_ls.builtins.diagnostics.flake8,
-            },
-        })
-        vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-    end,
+				-- Rust
+				null_ls.builtins.formatting.rustfmt,
+
+				-- Python
+				null_ls.builtins.formatting.isort,
+				null_ls.builtins.formatting.black,
+				null_ls.builtins.diagnostics.mypy,
+				null_ls.builtins.diagnostics.flake8,
+			},
+		})
+		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+	end,
 }

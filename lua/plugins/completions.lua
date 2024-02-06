@@ -1,9 +1,6 @@
 return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
-        config = function()
-
-        end
 	},
 	{
 		"L3MON4D3/LuaSnip",
@@ -16,7 +13,7 @@ return {
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
-			require("luasnip.loaders.from_snipmate").lazy_load()
+			require("luasnip.loaders.from_vscode").lazy_load()
 			cmp.setup({
 				snippet = {
 					expand = function(args)
