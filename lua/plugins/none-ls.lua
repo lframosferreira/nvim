@@ -25,6 +25,9 @@ return {
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.diagnostics.mypy,
 				null_ls.builtins.diagnostics.flake8,
+
+                -- LaTeX
+                null_ls.builtins.formatting.latexindent
 			},
 		})
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})

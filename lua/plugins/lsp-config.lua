@@ -19,6 +19,7 @@ return {
 					"marksman",
 					"zls",
 					"hydra_lsp",
+                    "texlab"
 				},
 			})
 		end,
@@ -39,6 +40,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
