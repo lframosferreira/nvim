@@ -14,12 +14,12 @@ return {
 					"rust_analyzer",
 					"clangd",
 					"texlab",
-					"pylsp",
+                    "pylsp",
 					"julials",
 					"marksman",
 					"zls",
-					"hydra_lsp",
-                    "texlab"
+                    "texlab",
+                    "hydra_lsp"
 				},
 			})
 		end,
